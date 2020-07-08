@@ -556,7 +556,7 @@ void roundInput(Json::Value &inputValue)
 	}
 }
 
-int main()
+int main(int argc, char** argv)
 {
 #if 0
 	freopen("data.json", "r", stdin);
@@ -593,7 +593,7 @@ int main()
 			tileWall.push_back("J" + to_string(i));
 		}
 	}
-	unsigned int randSeed = time(nullptr);
+	unsigned int randSeed = argc <= 1 ? time(nullptr) : stoi(argv[1]);
 	outputValue["command"] = "request";
 
 	// "content": {

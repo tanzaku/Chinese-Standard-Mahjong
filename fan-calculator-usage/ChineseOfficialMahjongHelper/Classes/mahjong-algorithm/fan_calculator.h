@@ -218,7 +218,7 @@ typedef uint16_t fan_table_t[FAN_TABLE_SIZE];
  */
 int calculate_fan(const calculate_param_t *calculate_param, fan_table_t *fan_table);
 
-#if 0
+#if 1
 
 /**
  * @brief 番名（英文）
